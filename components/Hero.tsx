@@ -3,6 +3,11 @@ import { ArrowRight, Calendar, TrendingUp } from 'lucide-react';
 import { cn } from '../lib/utils';
 import { motion } from 'motion/react';
 
+// Synchronous detection — avoids hydration mismatch and layout shift.
+// On mobile, the hero image is below the fold (single-column layout).
+// On desktop (lg+), both columns are visible → image is in-viewport = LCP candidate.
+const isDesktop = typeof window !== 'undefined' && window.matchMedia('(min-width: 1024px)').matches;
+
 export const Hero = () => {
     return (
         <section className="relative pt-10 pb-24 bg-transparent overflow-hidden scroll-section">
@@ -161,10 +166,12 @@ export const Hero = () => {
                                     alt="Dr. Lucas Nemes — Médico Nutrólogo especialista em pós-bariátrica"
                                     width={600}
                                     height={600}
-                                    loading="eager"
-                                    fetchPriority="high"
+                                    // Desktop: image is in-viewport → eager load, high priority (LCP)
+                                    // Mobile: image is below fold → lazy load, saves ~198KB on initial load
+                                    loading={isDesktop ? 'eager' : 'lazy'}
+                                    fetchPriority={isDesktop ? 'high' : 'auto'}
                                     decoding="async"
-                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                    sizes="(max-width: 1024px) 100vw, 50vw"
                                     className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-60" />

@@ -48,14 +48,19 @@
     />
   </noscript>
 
-  <!-- Preload LCP hero image — high priority for fastest paint -->
+  <!--
+    Preload LCP hero image — desktop only.
+    On mobile, the hero image is below the fold (single-column layout),
+    so preloading it wastes bandwidth and competes with critical resources.
+    media="(min-width: 1024px)" ensures this only fires on lg+ screens.
+  -->
   <link
     rel="preload"
     as="image"
     href="/images/hero-guia-pratico.avif"
     type="image/avif"
     fetchpriority="high"
-    imagesizes="(max-width: 768px) 100vw, 50vw"
+    media="(min-width: 1024px)"
   />
 </head>
 

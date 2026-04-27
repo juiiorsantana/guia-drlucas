@@ -25,12 +25,19 @@ export default defineConfig(({ mode }) => {
         target: 'es2020',
         // Warn on chunks > 500KB
         chunkSizeWarningLimit: 500,
+        // Inline small assets (< 4KB) as base64 to avoid extra HTTP requests
+        assetsInlineLimit: 4096,
+        // Use esbuild for faster, smaller CSS minification
+        cssMinify: 'esbuild',
+        // Disable the modulepreload polyfill — not needed for modern browsers.
+        // This removes ~1.6KB of polyfill code from the main bundle.
+        modulePreload: { polyfill: false },
         rollupOptions: {
           output: {
             // Manual chunk splitting: isolate heavy libs
             manualChunks: {
               // React core — cached separately
-              'vendor-react': ['react', 'react-dom'],
+              'vendor-react': ['react', 'react-dom', 'react-dom/client'],
               // Motion library — only loaded when needed
               'vendor-motion': ['motion'],
               // UI utilities — small, shared across components
