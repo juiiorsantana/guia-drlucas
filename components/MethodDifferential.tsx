@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Activity, Brain, Heart, Fingerprint } from "lucide-react";
-import { GlowingEffect } from "@/components/ui/glowing-effect";
+import { GlowingEffect } from "./ui/glowing-effect";
 import { motion } from "motion/react";
 
 export default function MethodDifferential() {
