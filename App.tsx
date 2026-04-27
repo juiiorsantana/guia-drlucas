@@ -1,19 +1,27 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Hero } from './components/Hero';
-import { Agitation } from './components/Agitation';
-import { TransitionCard } from './components/TransitionCard';
-import { SocialProof } from './components/SocialProof';
-import { TargetAudience } from './components/TargetAudience';
-
-import MethodDifferential from './components/MethodDifferential';
-import { Instructor } from './components/Instructor';
-import { FinalWarning } from './components/FinalWarning';
-import GuideProgram from './components/GuideProgram';
-import { WhatsIncluded } from './components/WhatsIncluded';
-
-
-import WhyCheap from './components/WhyCheap';
 import { GridBackground } from './components/ui/GridBackground';
+
+// Above-the-fold: carregados imediatamente
+import { Agitation } from './components/Agitation';
+
+// Below-the-fold: lazy loaded para reduzir bundle inicial
+const TransitionCard    = lazy(() => import('./components/TransitionCard').then(m => ({ default: m.TransitionCard })));
+const TargetAudience    = lazy(() => import('./components/TargetAudience').then(m => ({ default: m.TargetAudience })));
+const SocialProof       = lazy(() => import('./components/SocialProof').then(m => ({ default: m.SocialProof })));
+const MethodDifferential = lazy(() => import('./components/MethodDifferential'));
+const GuideProgram      = lazy(() => import('./components/GuideProgram'));
+const WhatsIncluded     = lazy(() => import('./components/WhatsIncluded').then(m => ({ default: m.WhatsIncluded })));
+const WhyCheap          = lazy(() => import('./components/WhyCheap'));
+const Instructor        = lazy(() => import('./components/Instructor').then(m => ({ default: m.Instructor })));
+const FinalWarning      = lazy(() => import('./components/FinalWarning').then(m => ({ default: m.FinalWarning })));
+
+// Skeleton simples para Suspense fallback
+const SectionSkeleton = () => (
+  <div className="w-full py-20 flex items-center justify-center">
+    <div className="w-8 h-8 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin" />
+  </div>
+);
 
 const App: React.FC = () => {
   return (
@@ -21,19 +29,38 @@ const App: React.FC = () => {
       <GridBackground />
       <div className="relative z-10 bg-transparent">
 
-
+        {/* Above the fold — carregado imediatamente */}
         <Hero />
         <Agitation />
-        <TransitionCard />
-        <TargetAudience />
-        <SocialProof />
-        <MethodDifferential />
 
-        <GuideProgram />
-        <WhatsIncluded />
-        <WhyCheap />
-        <Instructor />
-        <FinalWarning />
+        {/* Below the fold — lazy loaded */}
+        <Suspense fallback={<SectionSkeleton />}>
+          <TransitionCard />
+        </Suspense>
+        <Suspense fallback={<SectionSkeleton />}>
+          <TargetAudience />
+        </Suspense>
+        <Suspense fallback={<SectionSkeleton />}>
+          <SocialProof />
+        </Suspense>
+        <Suspense fallback={<SectionSkeleton />}>
+          <MethodDifferential />
+        </Suspense>
+        <Suspense fallback={<SectionSkeleton />}>
+          <GuideProgram />
+        </Suspense>
+        <Suspense fallback={<SectionSkeleton />}>
+          <WhatsIncluded />
+        </Suspense>
+        <Suspense fallback={<SectionSkeleton />}>
+          <WhyCheap />
+        </Suspense>
+        <Suspense fallback={<SectionSkeleton />}>
+          <Instructor />
+        </Suspense>
+        <Suspense fallback={<SectionSkeleton />}>
+          <FinalWarning />
+        </Suspense>
 
         {/* Footer */}
         <footer className="bg-slate-900 text-white py-12 border-t border-slate-800">

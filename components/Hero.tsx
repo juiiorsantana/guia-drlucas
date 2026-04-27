@@ -164,6 +164,11 @@ export const Hero = () => {
                                 <img
                                     src="/images/hero-guia-pratico.avif"
                                     alt="Dr. Lucas Nemes"
+                                    width={600}
+                                    height={600}
+                                    loading="eager"
+                                    fetchPriority="high"
+                                    decoding="async"
                                     className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-60"></div>
