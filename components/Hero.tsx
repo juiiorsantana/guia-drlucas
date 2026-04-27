@@ -162,7 +162,7 @@ export const Hero = () => {
                             {/* Replaced Brutalist Image Box with Fluid Rounded Image Container */}
                             <div className="bg-gradient-to-b from-slate-800 to-slate-900 h-[450px] lg:h-[600px] w-full flex items-end justify-center text-white relative overflow-hidden group">
                                 <img
-                                    src="/images/dr-lucas-hero.jpg"
+                                    src="/images/hero-guia-pratico.avif"
                                     alt="Dr. Lucas Nemes"
                                     className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                                 />
