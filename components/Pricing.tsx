@@ -38,9 +38,8 @@ export const Pricing = () => {
                             transition={{ staggerChildren: 0.08, delayChildren: 0.3 }}
                         >
                             {[
-                                "Guia Prático Completo em PDF",
+                                "Material feito pelo Dr. Lucas Nemes",
                                 "Acesso Imediato ao Material",
-                                "Material de Apoio (PDF)",
                                 "Certificado Oficial",
                                 "Grupo de Networking"
                             ].map((item, i) => (

@@ -18,7 +18,7 @@ export default function MethodDifferential() {
                     transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                 >
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white max-w-4xl mx-auto leading-tight">
-                        O Guia Vida Plena entrega nutrição de verdade onde dietas comuns falham.
+                        O Guia de Dietoterapia entrega nutrição de verdade onde dietas comuns falham.
                     </h2>
                 </motion.div>
 
