@@ -23,25 +23,39 @@
     content="Aprenda exatamente o que comer no pós-bariátrico com o guia definitivo de receitas funcionais. Evite deficiências, anemia e queda de cabelo." />
   <meta name="twitter:image" content="https://metodovidaplena.com.br/images/hero-guia-pratico.avif" />
 
-  <!-- DNS Prefetch & Preconnect for critical origins -->
+  <!-- DNS Prefetch & Preconnect -->
   <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
   <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <!-- Google Fonts: non-blocking via link (replaces @import) -->
+  <!--
+    Google Fonts: TRULY non-blocking via preload + onload swap.
+    rel="preload" loads the CSS without blocking rendering.
+    onload swaps to rel="stylesheet" once loaded.
+    The noscript fallback handles JS-disabled environments.
+  -->
   <link
+    rel="preload"
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
   />
+  <noscript>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    />
+  </noscript>
 
-  <!-- Preload LCP hero image -->
+  <!-- Preload LCP hero image — high priority for fastest paint -->
   <link
     rel="preload"
     as="image"
     href="/images/hero-guia-pratico.avif"
     type="image/avif"
     fetchpriority="high"
+    imagesizes="(max-width: 768px) 100vw, 50vw"
   />
 </head>
 
