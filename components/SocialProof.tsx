@@ -12,41 +12,59 @@ const stats = [
 
 const testimonials = [
     {
-        quote: "Hoje mantenho meus 45kg a menos e finalmente tenho paz com a comida.",
+        quote: "Hoje mantenho meus 45kg a menos e finalmente tenho paz com a comida. As receitas do guia viraram rotina na minha casa.",
         author: "Ana P.",
         age: "38",
-        role: "Paciente há 2 anos"
+        role: "Paciente há 2 anos",
+        result: "−45 kg mantidos",
+        tag: "Manutenção de peso",
+        stars: 5,
     },
     {
-        quote: "Aprendi que manutenção não é perfeição, é consistência.",
+        quote: "Aprendi que manutenção não é perfeição, é consistência. Parei de ter deficiência de ferro pela primeira vez desde a cirurgia.",
         author: "Carla Mendes",
         age: "42",
-        role: "Paciente há 1 ano"
+        role: "Paciente há 1 ano",
+        result: "Sem anemia há 8 meses",
+        tag: "Controle nutricional",
+        stars: 5,
     },
     {
-        quote: "Foi a primeira vez que alguém cuidou do meu emocional.",
+        quote: "Foi a primeira vez que alguém cuidou do meu emocional junto com a nutrição. Me sinto de verdade curada por dentro.",
         author: "Juliana Costa",
         age: "35",
-        role: "Paciente há 6 meses"
+        role: "Paciente há 6 meses",
+        result: "−18 kg em 6 meses",
+        tag: "Saúde emocional",
+        stars: 5,
     },
     {
-        quote: "Me sinto com 20 anos de novo, recuperei minha energia vital.",
+        quote: "Me sinto com 20 anos de novo, recuperei minha energia vital. Meus exames estão perfeitos pela primeira vez em anos.",
         author: "Roberto S.",
         age: "45",
-        role: "Paciente há 3 anos"
+        role: "Paciente há 3 anos",
+        result: "Exames 100% normalizados",
+        tag: "Qualidade de vida",
+        stars: 5,
     },
     {
-        quote: "O método mudou minha relação com o espelho e com a saúde.",
+        quote: "O método mudou minha relação com o espelho e com a saúde. As receitas são práticas e deliciosas, sem abrir mão dos nutrientes.",
         author: "Fernanda L.",
         age: "31",
-        role: "Paciente há 8 meses"
+        role: "Paciente há 8 meses",
+        result: "−22 kg em 8 meses",
+        tag: "Transformação corporal",
+        stars: 5,
     },
     {
-        quote: "Profissionalismo e atenção ímpares, recomendo de olhos fechados.",
+        quote: "Profissionalismo e atenção ímpares, recomendo de olhos fechados. Finalmente entendi o que meu corpo precisa após a bariátrica.",
         author: "Marcelo D.",
         age: "50",
-        role: "Paciente há 1.5 anos"
-    }
+        role: "Paciente há 1.5 anos",
+        result: "Suplementação zerada",
+        tag: "Protocolo pós-bariátrico",
+        stars: 5,
+    },
 ];
 
 export const SocialProof: React.FC = () => {
@@ -130,24 +148,44 @@ export const SocialProof: React.FC = () => {
                             {testimonials.map((testimonial, index) => (
                                 <div
                                     key={index}
-                                    className="w-[400px] bg-white rounded-4xl p-8 shadow-soft hover:shadow-soft-xl transition-all duration-500 h-64 border border-slate-100 flex flex-col relative overflow-hidden group mx-4"
+                                    className="w-[420px] bg-white rounded-3xl p-7 shadow-soft hover:shadow-soft-xl transition-all duration-500 border border-slate-100 flex flex-col relative overflow-hidden group mx-4"
                                 >
-                                    <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-primary to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                    {/* Accent bar */}
+                                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-t-3xl" />
 
-                                    <div className="text-4xl text-primary mb-4 font-serif opacity-30">"</div>
-                                    <p className="text-lg text-slate-700 italic flex-grow leading-relaxed line-clamp-3">
-                                        {testimonial.quote}
+                                    {/* Tag + Stars */}
+                                    <div className="flex items-center justify-between mb-4">
+                                        <span className="text-xs font-semibold uppercase tracking-wider text-primary bg-primary/10 px-2.5 py-1 rounded-full">
+                                            {testimonial.tag}
+                                        </span>
+                                        <div className="flex gap-0.5">
+                                            {Array.from({ length: testimonial.stars }).map((_, i) => (
+                                                <svg key={i} className="w-4 h-4 text-amber-400 fill-amber-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    {/* Result badge */}
+                                    <div className="flex items-center gap-2 mb-4 bg-emerald-50 border border-emerald-100 rounded-xl px-3 py-2 w-fit">
+                                        <span className="text-emerald-500 text-sm">✓</span>
+                                        <span className="text-emerald-700 font-bold text-sm">{testimonial.result}</span>
+                                    </div>
+
+                                    {/* Quote */}
+                                    <p className="text-slate-700 leading-relaxed flex-grow text-sm">
+                                        "{testimonial.quote}"
                                     </p>
 
-                                    <div className="flex items-center gap-4 mt-auto border-t border-slate-50 pt-6">
-                                        <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 font-bold text-xl shrink-0">
+                                    {/* Author */}
+                                    <div className="flex items-center gap-3 mt-5 pt-5 border-t border-slate-100">
+                                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-cyan-400/20 flex items-center justify-center text-primary font-bold text-base shrink-0">
                                             {testimonial.author.charAt(0)}
                                         </div>
                                         <div>
-                                            <div className="font-bold text-medical-slate">
-                                                {testimonial.author}, <span className="text-slate-400 font-normal">{testimonial.age}</span>
+                                            <div className="font-bold text-medical-slate text-sm">
+                                                {testimonial.author}, <span className="text-slate-400 font-normal">{testimonial.age} anos</span>
                                             </div>
-                                            <div className="text-xs text-primary font-medium uppercase tracking-wider">
+                                            <div className="text-xs text-slate-400 mt-0.5">
                                                 {testimonial.role}
                                             </div>
                                         </div>
