@@ -134,7 +134,12 @@ export const Pricing = () => {
                                 }}
                                 transition={{ duration: 0.4 }}
                             >
-                                <FluidButton variant="primary" fullWidth className="shadow-soft-primary hover:shadow-glow">
+                                <FluidButton 
+                                    variant="primary" 
+                                    fullWidth 
+                                    className="shadow-soft-primary hover:shadow-glow"
+                                    onClick={() => window.location.href = 'https://pay.cakto.com.br/4kex4c9_758080'}
+                                >
                                     GARANTIR AGORA
                                 </FluidButton>
                             </motion.div>
