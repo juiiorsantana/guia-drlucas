@@ -35,7 +35,7 @@ export const TargetAudience: React.FC = () => {
                     >
                         {[...Array(20)].map((_, i) => (
                             <span key={i} className="text-white/20 font-display font-black text-3xl tracking-widest uppercase italic mx-12 shrink-0 whitespace-nowrap">
-                                LOGO METODO
+                                GUIA PRÁTICO
                             </span>
                         ))}
                     </motion.div>
@@ -58,7 +58,7 @@ export const TargetAudience: React.FC = () => {
                     >
                         {[...Array(20)].map((_, i) => (
                             <span key={i} className="text-white/20 font-display font-black text-3xl tracking-widest uppercase italic mx-12 shrink-0 whitespace-nowrap">
-                                LOGO METODO
+                                PÓS BARIÁTRICA
                             </span>
                         ))}
                     </motion.div>
