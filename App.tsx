@@ -66,10 +66,10 @@ const App: React.FC = () => {
         <footer className="bg-slate-900 text-white py-12 border-t border-slate-800">
           <div className="container mx-auto px-4 text-center">
             <p className="font-mono text-xs text-slate-500 mb-4 tracking-widest uppercase">
-              Protocolo Médico Registrado — CRM/SP 123.456
+              DR LUCAS NEMES - CRM 8060 - RQE 79890
             </p>
             <div className="font-display font-bold text-2xl mb-8 text-white">
-              MÉTODO VIDA PLENA © 2024
+              GUIA PRÁTICO DE DIETOTERAPIA © 2026
             </div>
             <div className="flex justify-center gap-6 text-sm font-medium text-slate-400">
               <a href="#" className="hover:text-white transition-colors">Termos de Uso</a>

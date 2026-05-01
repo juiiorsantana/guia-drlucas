@@ -3,9 +3,9 @@ import { motion } from 'motion/react';
 
 // IMAGENS
 // A imagem desktop deve ter o Dr. Lucas à esquerda e espaço vazio à direita para o texto
-const DESKTOP_IMAGE = "https://drlucasnemes.com.br/wp-content/uploads/2026/02/bg-secao-quem-vai-te-ensinar.avif";
+const DESKTOP_IMAGE = "/images/dr-lucas-hero.jpg";
 // A imagem mobile deve ter o Dr. Lucas no topo e espaço vazio embaixo (ou degradê) para o texto
-const MOBILE_IMAGE = "https://drlucasnemes.com.br/wp-content/uploads/2026/02/bg-secao-quem-vai-te-ensinar.avif";
+const MOBILE_IMAGE = "/images/dr-lucas-hero.jpg";
 
 export const Instructor = () => {
     return (

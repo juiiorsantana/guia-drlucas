@@ -37,7 +37,7 @@ export const WhatsIncluded = () => {
 
                             <ul className="space-y-4">
                                 {[
-                                    "Guia Prático Completo em PDF",
+                                    "Feito pelo Médico Nutrólogo Dr. Lucas Nemes",
                                     "Guia Prático de nutrição",
                                     "Lista de suplementação",
                                     "+40 Receitas funcionais",
@@ -106,9 +106,9 @@ export const WhatsIncluded = () => {
                                         </div>
                                     </div>
                                     <p className="text-center text-slate-400 text-sm font-medium">
-                                        <span className="text-white font-bold">37%</span> dos ingressos vendidos a R$37,00
+                                        <span className="text-white font-bold">Poucas cópias</span> disponível a preço especial!
                                     </p>
-                                </div>
+                                </div>  
 
                                 {/* Security Badges */}
                                 <div className="mt-8 pt-6 border-t border-slate-700/50 flex flex-wrap justify-between gap-4">
