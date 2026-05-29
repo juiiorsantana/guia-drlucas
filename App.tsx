@@ -14,6 +14,7 @@ const GuideProgram      = lazy(() => import('./components/GuideProgram'));
 const WhatsIncluded     = lazy(() => import('./components/WhatsIncluded').then(m => ({ default: m.WhatsIncluded })));
 const WhyCheap          = lazy(() => import('./components/WhyCheap'));
 const Instructor        = lazy(() => import('./components/Instructor').then(m => ({ default: m.Instructor })));
+const BonusSection      = lazy(() => import('./components/BonusSection').then(m => ({ default: m.BonusSection })));
 const FinalWarning      = lazy(() => import('./components/FinalWarning').then(m => ({ default: m.FinalWarning })));
 
 // Skeleton simples para Suspense fallback
@@ -48,6 +49,9 @@ const App: React.FC = () => {
         </Suspense>
         <Suspense fallback={<SectionSkeleton />}>
           <GuideProgram />
+        </Suspense>
+        <Suspense fallback={<SectionSkeleton />}>
+          <BonusSection />
         </Suspense>
         <Suspense fallback={<SectionSkeleton />}>
           <WhatsIncluded />

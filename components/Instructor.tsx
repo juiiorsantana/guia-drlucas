@@ -3,9 +3,9 @@ import { motion } from 'motion/react';
 
 // IMAGENS
 // A imagem desktop deve ter o Dr. Lucas à esquerda e espaço vazio à direita para o texto
-const DESKTOP_IMAGE = "/images/dr-lucas-hero.jpg";
+const DESKTOP_IMAGE = "/images/bghero.avif";
 // A imagem mobile deve ter o Dr. Lucas no topo e espaço vazio embaixo (ou degradê) para o texto
-const MOBILE_IMAGE = "/images/dr-lucas-hero.jpg";
+const MOBILE_IMAGE = "/images/bghero.avif";
 
 export const Instructor = () => {
     return (
@@ -25,7 +25,7 @@ export const Instructor = () => {
                 {/* Gradients for Text Readability */}
 
                 {/* Desktop Gradient: Fade from Slate-900 (Right) to Transparent (Left) */}
-                <div className="hidden md:block absolute inset-0 bg-gradient-to-l from-slate-950 via-slate-900/80 to-transparent"></div>
+                <div className="hidden md:block absolute inset-0 bg-gradient-to-l from-slate-950/70 from-40% via-slate-900/10 via-65% to-transparent"></div>
 
                 {/* Mobile Gradient: Fade from Slate-900 (Bottom) to Transparent (Top) */}
                 <div className="md:hidden absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/90 to-transparent"></div>
