@@ -106,7 +106,7 @@ export const Hero = () => {
                                 whileTap={{ scale: 0.96 }}
                                 transition={{ type: 'spring', stiffness: 400, damping: 20 }}
                                 className="relative group w-full rounded-xl shadow-[0_4px_24px_-4px_rgba(6,182,212,0.5)] hover:shadow-[0_8px_32px_-4px_rgba(6,182,212,0.6)] transition-shadow duration-300 overflow-hidden"
-                                onClick={() => window.location.href = 'https://pay.cakto.com.br/4kex4c9_758080'}
+                                onClick={() => window.location.href = 'https://pay.hotmart.com/N106123722W'}
                             >
                                 {/* Liquid Background */}
                                 <div

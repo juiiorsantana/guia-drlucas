@@ -182,7 +182,7 @@ export const FinalWarning = () => {
                                 tap: { scale: 0.95 }
                             }}
                             className="relative group rounded-full shadow-[0_4px_30px_-4px_rgba(6,182,212,0.6)] hover:shadow-[0_8px_40px_-4px_rgba(6,182,212,0.7)] transition-all duration-300 overflow-hidden"
-                            onClick={() => window.location.href = 'https://pay.cakto.com.br/4kex4c9_758080'}
+                            onClick={() => window.location.href = 'https://pay.hotmart.com/N106123722W'}
                         >
                             {/* Liquid Background */}
                             <div

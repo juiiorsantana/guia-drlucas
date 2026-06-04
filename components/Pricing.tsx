@@ -138,7 +138,7 @@ export const Pricing = () => {
                                     variant="primary" 
                                     fullWidth 
                                     className="shadow-soft-primary hover:shadow-glow"
-                                    onClick={() => window.location.href = 'https://pay.cakto.com.br/4kex4c9_758080'}
+                                    onClick={() => window.location.href = 'https://pay.hotmart.com/N106123722W'}
                                 >
                                     GARANTIR AGORA
                                 </FluidButton>

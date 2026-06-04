@@ -155,7 +155,7 @@ export const BonusSection = () => {
                                                 tap: { scale: 0.96 }
                                             }}
                                             className="relative w-full group rounded-2xl shadow-[0_4px_30px_-4px_rgba(52,211,153,0.5)] hover:shadow-[0_8px_40px_-4px_rgba(52,211,153,0.65)] transition-shadow duration-300 overflow-hidden"
-                                            onClick={() => window.location.href = 'https://pay.cakto.com.br/4kex4c9_758080'}
+                                            onClick={() => window.location.href = 'https://pay.hotmart.com/N106123722W'}
                                         >
                                             {/* Fundo gradiente */}
                                             <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-500 animate-gradient bg-[length:200%_auto]" />

@@ -93,7 +93,7 @@ export const WhatsIncluded = () => {
                                     variant="primary"
                                     fullWidth
                                     className="h-16 text-lg font-bold shadow-[0_0_30px_-5px_var(--primary)] hover:shadow-[0_0_50px_-10px_var(--primary)] transition-all duration-300"
-                                    onClick={() => window.location.href = 'https://pay.cakto.com.br/4kex4c9_758080'}
+                                    onClick={() => window.location.href = 'https://pay.hotmart.com/N106123722W'}
                                 >
                                     GARANTIR MEU ACESSO
                                 </FluidButton>
