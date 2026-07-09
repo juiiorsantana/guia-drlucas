@@ -5,6 +5,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
+      appType: 'mpa',
       base: './',
       server: {
         port: 3000,
@@ -33,6 +34,11 @@ export default defineConfig(({ mode }) => {
         // This removes ~1.6KB of polyfill code from the main bundle.
         modulePreload: { polyfill: false },
         rollupOptions: {
+          // Multi-page: página original + nova oferta (/nova-oferta.html)
+          input: {
+            main: path.resolve(__dirname, 'index.html'),
+            'nova-oferta': path.resolve(__dirname, 'nova-oferta.html'),
+          },
           output: {
             // Manual chunk splitting: isolate heavy libs
             manualChunks: {
