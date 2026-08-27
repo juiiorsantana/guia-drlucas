@@ -60,8 +60,8 @@ const NovaOferta: React.FC = () => {
                             GUIA PRÁTICO DE DIETOTERAPIA © 2026
                         </div>
                         <div className="flex justify-center gap-6 text-sm font-medium text-slate-400">
-                            <a href="#" className="hover:text-white transition-colors">Termos de Uso</a>
-                            <a href="#" className="hover:text-white transition-colors">Política de Privacidade</a>
+                            <a href="/termos.html" className="hover:text-white transition-colors">Termos de Uso</a>
+                            <a href="/privacidade.html" className="hover:text-white transition-colors">Política de Privacidade</a>
                         </div>
                     </div>
                 </footer>

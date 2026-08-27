@@ -30,6 +30,12 @@ html.lenis body {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+
+  /* Framer Motion define opacity inline via JS; força visibilidade mesmo
+     que a animação de entrada (whileInView/animate) nunca seja concluída. */
+  section :where([style*="opacity"]) {
+    opacity: 1 !important;
+  }
 }
 
 @layer base {

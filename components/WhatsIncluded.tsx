@@ -4,7 +4,7 @@ import { Check, ShieldCheck, Lock, Clock, Video } from 'lucide-react';
 
 export const WhatsIncluded = () => {
     return (
-        <section className="py-24 bg-black relative overflow-hidden">
+        <section className="py-16 bg-black relative overflow-hidden">
             {/* Grid Pattern */}
             <div
                 className="absolute inset-0 [background-size:40px_40px] [background-image:linear-gradient(to_right,#333_1px,transparent_1px),linear-gradient(to_bottom,#333_1px,transparent_1px)] opacity-40 pointer-events-none"
@@ -27,7 +27,7 @@ export const WhatsIncluded = () => {
                                 <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-6">
                                     É ISSO QUE VOCÊ VAI TER ACESSO <br />
                                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-400">
-                                        NO GUIA PRÁTICO VIDA PLENA.
+                                        NO GUIA PRÁTICO DE DIETOTERAPIA.
                                     </span>
                                 </h2>
                                 <p className="text-slate-400 text-lg">
@@ -38,7 +38,7 @@ export const WhatsIncluded = () => {
                             <ul className="space-y-4">
                                 {[
                                     "Feito pelo Médico Nutrólogo Dr. Lucas Nemes",
-                                    "Guia Prático de nutrição",
+                                    "Guia Prático de Dietoterapia Pós-Bariátrica",
                                     "Lista de suplementação",
                                     "+40 Receitas funcionais",
                                     "Certificado de participação",
@@ -98,17 +98,12 @@ export const WhatsIncluded = () => {
                                     GARANTIR MEU ACESSO
                                 </FluidButton>
 
-                                {/* Progress Bar */}
-                                <div className="mt-8 space-y-3">
-                                    <div className="h-4 bg-slate-900 rounded-full overflow-hidden p-[2px] border border-slate-700/50 shadow-inner">
-                                        <div className="h-full w-[37%] bg-gradient-to-r from-pink-500 to-rose-500 rounded-full shadow-[0_0_15px_rgba(236,72,153,0.6)] animate-pulse">
-                                            <div className="w-full h-full bg-[linear-gradient(45deg,transparent,rgba(255,255,255,0.3),transparent)] bg-[length:20px_20px] opacity-30"></div>
-                                        </div>
-                                    </div>
+                                {/* Condição de lançamento */}
+                                <div className="mt-8">
                                     <p className="text-center text-slate-400 text-sm font-medium">
-                                        <span className="text-white font-bold">Poucas cópias</span> disponível a preço especial!
+                                        <span className="text-white font-bold">Condição especial de lançamento:</span> de R$ 97 por R$ 37
                                     </p>
-                                </div>  
+                                </div>
 
                                 {/* Security Badges */}
                                 <div className="mt-8 pt-6 border-t border-slate-700/50 flex flex-wrap justify-between gap-4">

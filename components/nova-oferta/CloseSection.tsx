@@ -18,15 +18,15 @@ const rightPath = [
 ];
 
 const urgencyReasons = [
-    { icon: Clock, text: 'Preço de 1º Lote pode aumentar a qualquer momento' },
-    { icon: TrendingDown, text: 'Vagas limitadas nesta condição' },
+    { icon: Clock, text: 'Preço de lançamento pode aumentar a qualquer momento' },
+    { icon: TrendingDown, text: 'Condição especial válida por tempo limitado' },
     { icon: ShieldCheck, text: 'Garantia de 7 dias — risco zero' },
     { icon: Zap, text: 'Acesso imediato — comece hoje' },
 ];
 
 export const CloseSection: React.FC = () => {
     return (
-        <section className="py-24 bg-medical-slate relative overflow-hidden scroll-section">
+        <section className="py-16 bg-medical-slate relative overflow-hidden scroll-section">
             {/* Gradiente amber/warning */}
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-amber-950/20 to-amber-900/30" />
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-amber-500/10 rounded-full blur-[120px]" />
@@ -34,8 +34,8 @@ export const CloseSection: React.FC = () => {
             <div className="container mx-auto px-4 relative z-10">
                 <motion.div
                     className="max-w-3xl mx-auto text-center mb-14"
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ y: 40 }}
+                    whileInView={{ y: 0 }}
                     viewport={{ once: true, margin: '-100px' }}
                     transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                 >
@@ -58,7 +58,7 @@ export const CloseSection: React.FC = () => {
                 >
                     <motion.div
                         className="bg-red-950/30 border border-red-500/20 rounded-3xl p-8"
-                        variants={{ hidden: { opacity: 0, x: -24 }, visible: { opacity: 1, x: 0 } }}
+                        variants={{ hidden: { x: -24 }, visible: { x: 0 } }}
                         transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
                     >
                         <h3 className="font-display font-bold text-xl text-red-300 mb-6 flex items-center gap-2">
@@ -76,7 +76,7 @@ export const CloseSection: React.FC = () => {
 
                     <motion.div
                         className="bg-emerald-950/30 border border-emerald-500/20 rounded-3xl p-8"
-                        variants={{ hidden: { opacity: 0, x: 24 }, visible: { opacity: 1, x: 0 } }}
+                        variants={{ hidden: { x: 24 }, visible: { x: 0 } }}
                         transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
                     >
                         <h3 className="font-display font-bold text-xl text-emerald-300 mb-6 flex items-center gap-2">
@@ -107,7 +107,7 @@ export const CloseSection: React.FC = () => {
                             <motion.div
                                 key={index}
                                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5 text-center"
-                                variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0 } }}
+                                variants={{ hidden: { y: 16 }, visible: { y: 0 } }}
                                 transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
                             >
                                 <Icon className="w-6 h-6 text-amber-400 mx-auto mb-3" />
@@ -120,8 +120,8 @@ export const CloseSection: React.FC = () => {
                 {/* CTA Final */}
                 <motion.div
                     className="max-w-xl mx-auto"
-                    initial={{ opacity: 0, y: 24 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ y: 24 }}
+                    whileInView={{ y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
                 >
@@ -134,7 +134,7 @@ export const CloseSection: React.FC = () => {
                     >
                         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-blue-600 to-cyan-500 animate-gradient bg-[length:200%_auto]" />
                         <div className="relative px-6 py-5 flex items-center justify-center gap-2 text-white font-bold tracking-wide text-lg">
-                            <span>QUERO GARANTIR MEU GUIA POR R$ 37</span>
+                            <span>QUERO ACESSAR O GUIA POR R$ 37</span>
                             <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                         </div>
                     </motion.button>

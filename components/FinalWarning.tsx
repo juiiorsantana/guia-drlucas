@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowRight, TrendingUp, X, Check, AlertTriangle } from 'lucide-react';
+import { ArrowRight, X, Check, AlertTriangle } from 'lucide-react';
 
 export const FinalWarning = () => {
     return (
-        <section className="relative py-24 bg-slate-900 overflow-hidden scroll-section">
+        <section className="relative py-16 bg-slate-900 overflow-hidden scroll-section">
             {/* Background Effects */}
             <div className="absolute inset-0">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-red-500/10 rounded-full blur-[150px]"></div>
@@ -23,8 +23,8 @@ export const FinalWarning = () => {
                     <motion.div
                         className="text-center mb-12"
                         variants={{
-                            hidden: { opacity: 0, y: 30 },
-                            visible: { opacity: 1, y: 0 }
+                            hidden: { y: 30 },
+                            visible: { y: 0 }
                         }}
                         transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                     >
@@ -38,8 +38,8 @@ export const FinalWarning = () => {
                     <motion.div
                         className="grid md:grid-cols-2 gap-6 mb-12"
                         variants={{
-                            hidden: { opacity: 0 },
-                            visible: { opacity: 1 }
+                            hidden: {},
+                            visible: {}
                         }}
                         transition={{ duration: 0.5 }}
                     >
@@ -47,8 +47,8 @@ export const FinalWarning = () => {
                         <motion.div
                             className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-3xl p-8"
                             variants={{
-                                hidden: { opacity: 0, x: -30 },
-                                visible: { opacity: 1, x: 0 }
+                                hidden: { x: -30 },
+                                visible: { x: 0 }
                             }}
                             transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
                         >
@@ -65,8 +65,8 @@ export const FinalWarning = () => {
                                         key={i}
                                         className="flex items-center gap-4 text-lg text-slate-400"
                                         variants={{
-                                            hidden: { opacity: 0, x: -20 },
-                                            visible: { opacity: 1, x: 0 }
+                                            hidden: { x: -20 },
+                                            visible: { x: 0 }
                                         }}
                                         transition={{ duration: 0.3, delay: i * 0.1 }}
                                     >
@@ -83,8 +83,8 @@ export const FinalWarning = () => {
                         <motion.div
                             className="bg-gradient-to-br from-cyan-950/50 to-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-3xl p-8 relative overflow-hidden"
                             variants={{
-                                hidden: { opacity: 0, x: 30 },
-                                visible: { opacity: 1, x: 0 }
+                                hidden: { x: 30 },
+                                visible: { x: 0 }
                             }}
                             transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
                         >
@@ -104,8 +104,8 @@ export const FinalWarning = () => {
                                         key={i}
                                         className="flex items-center gap-4 text-lg text-white"
                                         variants={{
-                                            hidden: { opacity: 0, x: 20 },
-                                            visible: { opacity: 1, x: 0 }
+                                            hidden: { x: 20 },
+                                            visible: { x: 0 }
                                         }}
                                         transition={{ duration: 0.3, delay: i * 0.1 }}
                                     >
@@ -119,49 +119,20 @@ export const FinalWarning = () => {
                         </motion.div>
                     </motion.div>
 
-                    {/* Scarcity Alert */}
+                    {/* Condição de lançamento */}
                     <motion.div
                         className="text-center mb-8"
                         variants={{
-                            hidden: { opacity: 0, y: 20 },
-                            visible: { opacity: 1, y: 0 }
+                            hidden: { y: 20 },
+                            visible: { y: 0 }
                         }}
                         transition={{ duration: 0.5 }}
                     >
                         <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-amber-500/10 border border-amber-500/30 rounded-full">
                             <AlertTriangle size={18} className="text-amber-400" />
                             <span className="text-amber-300 font-bold text-sm uppercase tracking-wider">
-                                Vagas limitadas. Decisão agora.
+                                Condição especial de lançamento: de R$ 97 por R$ 37
                             </span>
-                        </div>
-                    </motion.div>
-
-                    {/* Progress Bar */}
-                    <motion.div
-                        className="max-w-xl mx-auto mb-8"
-                        variants={{
-                            hidden: { opacity: 0, y: 20 },
-                            visible: { opacity: 1, y: 0 }
-                        }}
-                        transition={{ duration: 0.5, delay: 0.2 }}
-                    >
-                        <div className="space-y-3">
-                            <div className="flex justify-between text-sm font-medium">
-                                <span className="flex items-center gap-2 text-slate-400">
-                                    <TrendingUp size={16} className="text-cyan-400" />
-                                    37% do lote atual já vendido
-                                </span>
-                                <span className="text-cyan-400 font-bold">Últimas vagas</span>
-                            </div>
-                            <div className="h-3 w-full bg-slate-800 rounded-full overflow-hidden border border-slate-700">
-                                <motion.div
-                                    className="h-full bg-gradient-to-r from-cyan-600 to-primary rounded-full shadow-[0_0_15px_rgba(8,145,178,0.5)]"
-                                    initial={{ width: 0 }}
-                                    whileInView={{ width: "37%" }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 1.2, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
-                                />
-                            </div>
                         </div>
                     </motion.div>
 
@@ -169,8 +140,8 @@ export const FinalWarning = () => {
                     <motion.div
                         className="text-center"
                         variants={{
-                            hidden: { opacity: 0, y: 30, scale: 0.95 },
-                            visible: { opacity: 1, y: 0, scale: 1 }
+                            hidden: { y: 30, scale: 0.95 },
+                            visible: { y: 0, scale: 1 }
                         }}
                         transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                     >
@@ -204,7 +175,7 @@ export const FinalWarning = () => {
 
                             {/* Content */}
                             <div className="relative px-10 py-5 flex items-center gap-3 text-white font-bold tracking-wide text-lg">
-                                <span>QUERO GARANTIR MINHA VAGA POR R$ 37</span>
+                                <span>QUERO ACESSAR O GUIA POR R$ 37</span>
                                 <ArrowRight className="w-6 h-6 transition-transform duration-300 group-hover:translate-x-1" />
                             </div>
                         </motion.button>

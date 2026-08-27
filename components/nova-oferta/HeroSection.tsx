@@ -21,8 +21,8 @@ export const HeroSection: React.FC = () => {
                         {/* Badge animado */}
                         <motion.div
                             className="mx-auto lg:mx-0 flex items-center gap-2 rounded-full px-4 py-1.5 bg-white/80 backdrop-blur-sm border border-cyan-200/60 shadow-[inset_0_-8px_10px_#8fdfff1f] w-fit"
-                            initial={{ opacity: 0, scale: 0.97 }}
-                            animate={{ opacity: 1, scale: 1 }}
+                            initial={{ scale: 0.97 }}
+                            animate={{ scale: 1 }}
                             transition={{ duration: 0.4, ease: 'easeOut', delay: 0.05 }}
                         >
                             <BookOpen className="w-4 h-4 text-primary" />
@@ -41,8 +41,8 @@ export const HeroSection: React.FC = () => {
 
                         <motion.h2
                             className="text-lg md:text-xl font-medium text-slate-700 font-sans"
-                            initial={{ opacity: 0, y: 12 }}
-                            animate={{ opacity: 1, y: 0 }}
+                            initial={{ y: 12 }}
+                            animate={{ y: 0 }}
                             transition={{ duration: 0.5, ease: 'easeOut', delay: 0.2 }}
                         >
                             O Guia Prático de Dietoterapia é o protocolo médico que faltava para você parar de adivinhar e começar a nutrir seu corpo de verdade.
@@ -51,8 +51,8 @@ export const HeroSection: React.FC = () => {
                         {/* CTA */}
                         <motion.div
                             className="mt-4 max-w-xl mx-auto lg:mx-0 w-full"
-                            initial={{ opacity: 0, y: 16 }}
-                            animate={{ opacity: 1, y: 0 }}
+                            initial={{ y: 16 }}
+                            animate={{ y: 0 }}
                             transition={{ duration: 0.5, ease: 'easeOut', delay: 0.25 }}
                         >
                             <motion.button
@@ -70,12 +70,15 @@ export const HeroSection: React.FC = () => {
                                     whileHover={{ x: '350%', transition: { repeat: Infinity, duration: 1.5, ease: 'linear' } }}
                                 />
                                 <div className="relative px-6 py-4 flex items-center justify-center gap-2 text-white font-bold tracking-wide">
-                                    <span>QUERO MEU GUIA AGORA</span>
+                                    <span>QUERO ACESSAR O GUIA POR R$ 37</span>
                                     <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                                 </div>
                             </motion.button>
                             <p className="text-sm font-bold text-slate-700 text-center mt-4">
-                                de <span className="line-through text-slate-400">R$ 97</span> por apenas <span className="text-primary">R$ 37</span> no 1º Lote
+                                Condição especial de lançamento: de <span className="line-through text-slate-400">R$ 97</span> por <span className="text-primary">R$ 37</span>
+                            </p>
+                            <p className="text-xs text-slate-500 text-center mt-1">
+                                Acesso imediato • PDF digital • Conteúdo elaborado por médico nutrólogo
                             </p>
                         </motion.div>
                     </div>
@@ -83,8 +86,8 @@ export const HeroSection: React.FC = () => {
                     {/* Imagem — Dr. Lucas */}
                     <motion.div
                         className="lg:col-span-12 xl:col-span-5 relative mt-12 lg:mt-0"
-                        initial={{ opacity: 0, x: 30 }}
-                        animate={{ opacity: 1, x: 0 }}
+                        initial={{ x: 30 }}
+                        animate={{ x: 0 }}
                         transition={{ duration: 0.7, delay: 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
                     >
                         <div className="relative z-10 rounded-[2rem] lg:rounded-[3rem] overflow-hidden shadow-soft-xl border border-white/20">

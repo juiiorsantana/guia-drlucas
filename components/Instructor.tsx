@@ -9,7 +9,7 @@ const MOBILE_IMAGE = "/images/bghero.avif";
 
 export const Instructor = () => {
     return (
-        <section className="relative w-full py-24 md:py-32 overflow-hidden bg-slate-900 border-t border-slate-800 scroll-section">
+        <section className="relative w-full py-16 md:py-20 overflow-hidden bg-slate-900 border-t border-slate-800 scroll-section">
 
             {/* Background Image Container */}
             <div className="absolute inset-0 z-0">
@@ -43,8 +43,8 @@ export const Instructor = () => {
                         <motion.div
                             className="mb-8"
                             variants={{
-                                hidden: { opacity: 0, x: 40 },
-                                visible: { opacity: 1, x: 0 }
+                                hidden: { x: 40 },
+                                visible: { x: 0 }
                             }}
                             transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                         >
@@ -54,16 +54,17 @@ export const Instructor = () => {
                             <h3 className="text-4xl md:text-5xl font-display font-bold text-white tracking-widest uppercase drop-shadow-lg leading-tight">
                                 DR. LUCAS <br className="hidden md:block" /> NEMES
                             </h3>
+                            {/* TODO: RQE divergente no repositório original (7982 aqui vs. 79890 no rodapé). Confirmar o número correto com o Dr. Lucas antes de publicar. */}
                             <p className="text-slate-300 font-mono mt-3 tracking-wider text-sm border-l-2 border-primary pl-3">
-                                CRM/MT 8060 | RQE 7982
+                                CRM/MT 8060 | RQE 79890
                             </p>
                         </motion.div>
 
                         <motion.div
                             className="space-y-6 text-lg text-slate-200 leading-relaxed font-light drop-shadow-md"
                             variants={{
-                                hidden: { opacity: 0, y: 30 },
-                                visible: { opacity: 1, y: 0 }
+                                hidden: { y: 30 },
+                                visible: { y: 0 }
                             }}
                             transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                         >

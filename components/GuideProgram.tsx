@@ -4,7 +4,7 @@ import { BookOpen, ArrowUpRight } from 'lucide-react';
 
 export default function GuideProgram() {
     return (
-        <section className="bg-medical-slate py-24 relative overflow-hidden">
+        <section className="bg-medical-slate py-16 relative overflow-hidden">
             {/* Background Gradients */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                 <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px]" />
@@ -18,8 +18,8 @@ export default function GuideProgram() {
                     <div className="lg:col-span-5 relative">
                         <div className="lg:sticky lg:top-32 space-y-8">
                             <motion.div
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
+                                initial={{ x: -20 }}
+                                whileInView={{ x: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6 }}
                             >
@@ -104,8 +104,8 @@ export default function GuideProgram() {
 const ScheduleItem = ({ title }: { title: string }) => {
     return (
         <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ y: 10 }}
+            whileInView={{ y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
             className="group flex items-center justify-between p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-primary/50 transition-all duration-300 hover:bg-white/[0.07]"

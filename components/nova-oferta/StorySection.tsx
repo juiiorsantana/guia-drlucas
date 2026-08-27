@@ -5,8 +5,8 @@ const patientStories = [
     {
         name: 'Ana',
         age: 38,
-        story: 'Perdeu 45kg, mas começou a perder cabelo aos montes. Descobriu deficiência severa de ferro.',
-        result: 'Reverteu em 8 meses com o guia',
+        story: 'Emagreceu bastante, mas começou a perder cabelo. Descobriu deficiência de ferro no exame de rotina.',
+        result: 'Passou a acompanhar a suplementação com o guia',
     },
     {
         name: 'Carla',
@@ -18,13 +18,13 @@ const patientStories = [
         name: 'Roberto',
         age: 45,
         story: 'Exames sempre alterados, energia zero.',
-        result: 'Normalizou tudo em 3 meses com o protocolo',
+        result: 'Passou a levar os exames de rotina mais a sério com o protocolo',
     },
 ];
 
 export const StorySection: React.FC = () => {
     return (
-        <section className="py-24 bg-medical-slate relative overflow-hidden scroll-section">
+        <section className="py-16 bg-medical-slate relative overflow-hidden scroll-section">
             {/* Background com foto do Dr. Lucas */}
             <div
                 className="absolute inset-0 opacity-10 bg-cover bg-center"
@@ -35,8 +35,8 @@ export const StorySection: React.FC = () => {
             <div className="container mx-auto px-4 relative z-10">
                 <motion.div
                     className="max-w-3xl mx-auto text-center mb-16"
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ y: 40 }}
+                    whileInView={{ y: 0 }}
                     viewport={{ once: true, margin: '-100px' }}
                     transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                 >
@@ -55,8 +55,8 @@ export const StorySection: React.FC = () => {
                         <motion.div
                             key={index}
                             className="relative pl-16 pb-10 last:pb-0"
-                            initial={{ opacity: 0, x: -24 }}
-                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ x: -24 }}
+                            whileInView={{ x: 0 }}
                             viewport={{ once: true, margin: '-50px' }}
                             transition={{ duration: 0.5, delay: index * 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
                         >
@@ -82,8 +82,8 @@ export const StorySection: React.FC = () => {
                 {/* Citação — o problema revelado */}
                 <motion.blockquote
                     className="max-w-3xl mx-auto text-center relative"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ y: 30 }}
+                    whileInView={{ y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                 >
@@ -91,8 +91,9 @@ export const StorySection: React.FC = () => {
                     <p className="text-xl md:text-2xl text-white font-medium leading-relaxed font-sans">
                         O problema nunca foi falta de disciplina. O problema é que a cirurgia bariátrica muda a fisiologia do seu corpo — e a maioria das receitas e dietas que existem por aí simplesmente <strong className="text-cyan-400">ignoram isso</strong>.
                     </p>
+                    {/* TODO: RQE divergente no repositório original (7982 aqui vs. 79890 no rodapé). Confirmar o número correto com o Dr. Lucas antes de publicar. */}
                     <footer className="mt-6 text-sm text-slate-400 font-medium tracking-wide uppercase">
-                        Dr. Lucas Nemes — CRM/MT 8060 | RQE 7982
+                        Dr. Lucas Nemes — CRM/MT 8060 | RQE 79890
                     </footer>
                 </motion.blockquote>
             </div>

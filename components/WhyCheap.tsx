@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 export default function WhyCheap() {
     return (
-        <section className="relative w-full py-20 bg-black overflow-hidden scroll-section" id="why-so-cheap">
+        <section className="relative w-full py-14 bg-black overflow-hidden scroll-section" id="why-so-cheap">
             {/* Grid Pattern */}
             <div
                 className={cn(
@@ -24,8 +24,8 @@ export default function WhyCheap() {
                     {/* Left Column: Headline */}
                     <motion.div
                         className="text-left"
-                        initial={{ opacity: 0, x: -40 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={{ x: -40 }}
+                        whileInView={{ x: 0 }}
                         viewport={{ once: true, margin: '-100px' }}
                         transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                     >
@@ -44,8 +44,8 @@ export default function WhyCheap() {
                     >
                         <motion.p
                             variants={{
-                                hidden: { opacity: 0, x: 40 },
-                                visible: { opacity: 1, x: 0 }
+                                hidden: { x: 40 },
+                                visible: { x: 0 }
                             }}
                             transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
                         >
@@ -53,8 +53,8 @@ export default function WhyCheap() {
                         </motion.p>
                         <motion.p
                             variants={{
-                                hidden: { opacity: 0, x: 40 },
-                                visible: { opacity: 1, x: 0 }
+                                hidden: { x: 40 },
+                                visible: { x: 0 }
                             }}
                             transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
                         >
@@ -62,8 +62,8 @@ export default function WhyCheap() {
                         </motion.p>
                         <motion.p
                             variants={{
-                                hidden: { opacity: 0, x: 40 },
-                                visible: { opacity: 1, x: 0 }
+                                hidden: { x: 40 },
+                                visible: { x: 0 }
                             }}
                             transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
                         >

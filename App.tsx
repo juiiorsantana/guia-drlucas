@@ -16,6 +16,7 @@ const WhyCheap          = lazy(() => import('./components/WhyCheap'));
 const Instructor        = lazy(() => import('./components/Instructor').then(m => ({ default: m.Instructor })));
 const BonusSection      = lazy(() => import('./components/BonusSection').then(m => ({ default: m.BonusSection })));
 const FinalWarning      = lazy(() => import('./components/FinalWarning').then(m => ({ default: m.FinalWarning })));
+const FAQSection        = lazy(() => import('./components/FAQSection').then(m => ({ default: m.FAQSection })));
 
 // Skeleton simples para Suspense fallback
 const SectionSkeleton = () => (
@@ -34,15 +35,14 @@ const App: React.FC = () => {
         <Hero />
         <Agitation />
 
-        {/* Below the fold — lazy loaded */}
+        {/* Below the fold — lazy loaded, ordem alinhada à estrutura recomendada:
+            diagnóstico -> o que vai aprender -> conteúdo -> bônus -> prova social ->
+            autoridade -> oferta -> FAQ -> aviso legal (footer) */}
         <Suspense fallback={<SectionSkeleton />}>
           <TransitionCard />
         </Suspense>
         <Suspense fallback={<SectionSkeleton />}>
           <TargetAudience />
-        </Suspense>
-        <Suspense fallback={<SectionSkeleton />}>
-          <SocialProof />
         </Suspense>
         <Suspense fallback={<SectionSkeleton />}>
           <MethodDifferential />
@@ -54,16 +54,22 @@ const App: React.FC = () => {
           <BonusSection />
         </Suspense>
         <Suspense fallback={<SectionSkeleton />}>
-          <WhatsIncluded />
-        </Suspense>
-        <Suspense fallback={<SectionSkeleton />}>
-          <WhyCheap />
+          <SocialProof />
         </Suspense>
         <Suspense fallback={<SectionSkeleton />}>
           <Instructor />
         </Suspense>
         <Suspense fallback={<SectionSkeleton />}>
+          <WhyCheap />
+        </Suspense>
+        <Suspense fallback={<SectionSkeleton />}>
+          <WhatsIncluded />
+        </Suspense>
+        <Suspense fallback={<SectionSkeleton />}>
           <FinalWarning />
+        </Suspense>
+        <Suspense fallback={<SectionSkeleton />}>
+          <FAQSection />
         </Suspense>
 
         {/* Footer */}
@@ -76,8 +82,8 @@ const App: React.FC = () => {
               GUIA PRÁTICO DE DIETOTERAPIA © 2026
             </div>
             <div className="flex justify-center gap-6 text-sm font-medium text-slate-400">
-              <a href="#" className="hover:text-white transition-colors">Termos de Uso</a>
-              <a href="#" className="hover:text-white transition-colors">Política de Privacidade</a>
+              <a href="/termos.html" className="hover:text-white transition-colors">Termos de Uso</a>
+              <a href="/privacidade.html" className="hover:text-white transition-colors">Política de Privacidade</a>
             </div>
           </div>
         </footer>

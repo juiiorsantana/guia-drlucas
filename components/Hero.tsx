@@ -48,8 +48,8 @@ export const Hero = () => {
                         {/* Badge */}
                         <motion.div
                             className="group relative mx-auto lg:mx-0 flex items-center justify-center rounded-full px-4 py-1.5 shadow-[inset_0_-8px_10px_#8fdfff1f] transition-shadow duration-500 ease-out hover:shadow-[inset_0_-5px_10px_#8fdfff3f] bg-white/80 backdrop-blur-sm w-fit"
-                            initial={{ opacity: 0, scale: 0.97 }}
-                            animate={{ opacity: 1, scale: 1 }}
+                            initial={{ scale: 0.97 }}
+                            animate={{ scale: 1 }}
                             transition={{ duration: 0.4, ease: 'easeOut', delay: 0.1 }}
                         >
                             <span
@@ -66,7 +66,7 @@ export const Hero = () => {
                             />
                             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse mr-2 relative z-10" />
                             <span className="text-sm font-medium text-slate-600 tracking-wide relative z-10">
-                                Material Exclusivo — Receitas Funcionais Pós-Bariátrica
+                                Material Exclusivo — Guia Prático de Dietoterapia Pós-Bariátrica
                             </span>
                         </motion.div>
 
@@ -79,25 +79,25 @@ export const Hero = () => {
                         <h1
                             className="text-[2.25rem] md:text-[2.7rem] lg:text-[3.375rem] font-bold leading-[1.1] tracking-tight text-slate-900"
                         >
-                            Pare de adivinhar o que comer no pós-bariátrico,<br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-600">use o guia prático correto!</span>
+                            Um guia prático para se alimentar melhor{' '}
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-600">depois da bariátrica</span>
                         </h1>
 
                         {/* Subheadline */}
                         <motion.h2
                             className="text-lg md:text-xl font-medium text-slate-700"
-                            initial={{ opacity: 0, y: 12 }}
-                            animate={{ opacity: 1, y: 0 }}
+                            initial={{ y: 12 }}
+                            animate={{ y: 0 }}
                             transition={{ duration: 0.5, ease: 'easeOut', delay: 0.2 }}
                         >
-                            Aprenda exatamente o que comer, como suplementar e como evitar deficiências que causam anemia, queda de cabelo e cansaço através de um guia prático completo focado em receitas funcionais.
+                            Receitas funcionais, orientações sobre suplementação e informações essenciais para ajudar você a organizar sua alimentação e prevenir deficiências nutricionais no pós-operatório.
                         </motion.h2>
 
                         {/* Offer Box (Price + Scarcity) */}
                         <motion.div
                             className="flex flex-col gap-4 mt-6 bg-white/80 backdrop-blur-md border border-slate-200 p-6 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] max-w-xl mx-auto lg:mx-0 w-full"
-                            initial={{ opacity: 0, y: 16 }}
-                            animate={{ opacity: 1, y: 0 }}
+                            initial={{ y: 16 }}
+                            animate={{ y: 0 }}
                             transition={{ duration: 0.5, ease: 'easeOut', delay: 0.25 }}
                         >
 
@@ -123,32 +123,21 @@ export const Hero = () => {
 
                                 {/* Content */}
                                 <div className="relative px-6 py-4 flex items-center justify-center gap-2 text-white font-bold tracking-wide">
-                                    <span>QUERO GARANTIR MINHA VAGA</span>
+                                    <span>QUERO ACESSAR O GUIA POR R$ 37</span>
                                     <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                                 </div>
                             </motion.button>
 
-                            {/* Scarcity Bar */}
-                            <div className="space-y-2 w-full">
-                                <div className="flex justify-between text-xs font-semibold text-slate-600 uppercase tracking-wide">
-                                    <span className="flex items-center gap-1.5"><TrendingUp size={14} className="text-cyan-600" /> 37% Vendido</span>
-                                    <span className="text-cyan-600">Restam Poucas Vagas</span>
-                                </div>
-                                <div className="h-2.5 w-full bg-slate-100 rounded-full overflow-hidden border border-slate-200/60">
-                                    <motion.div
-                                        className="h-full bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full relative"
-                                        initial={{ width: 0 }}
-                                        animate={{ width: "37%" }}
-                                        transition={{ duration: 1.0, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
-                                    >
-                                        <div className="absolute top-0 right-0 bottom-0 w-[1px] bg-white/50 shadow-[0_0_10px_white]" />
-                                    </motion.div>
-                                </div>
+                            {/* Condição de lançamento */}
+                            <div className="flex items-center justify-center gap-1.5 text-xs font-semibold text-cyan-600 uppercase tracking-wide">
+                                <TrendingUp size={14} />
+                                <span>Condição especial de lançamento</span>
                             </div>
 
                             {/* Price */}
-                            <div className="flex items-center justify-center w-full">
-                                <span className="text-sm font-bold text-slate-700">de R$ 97 por apenas R$ 37 no primeiro Lote</span>
+                            <div className="flex flex-col items-center justify-center w-full gap-1">
+                                <span className="text-sm font-bold text-slate-700">de R$ 97 por R$ 37</span>
+                                <span className="text-xs text-slate-500">Acesso imediato • PDF digital • Conteúdo elaborado por médico nutrólogo</span>
                             </div>
                         </motion.div>
 
@@ -156,12 +145,12 @@ export const Hero = () => {
 
                     <motion.div
                         className="lg:col-span-12 xl:col-span-5 relative mt-12 lg:mt-0"
-                        initial={{ opacity: 0, x: 30 }}
-                        animate={{ opacity: 1, x: 0 }}
+                        initial={{ x: 30 }}
+                        animate={{ x: 0 }}
                         transition={{ duration: 0.7, delay: 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
                     >
                         <div className="relative z-10 rounded-[2rem] lg:rounded-[3rem] overflow-hidden shadow-soft-xl border border-white/20">
-                            <div className="bg-gradient-to-b from-slate-800 to-slate-900 h-[450px] lg:h-[600px] w-full flex items-end justify-center text-white relative overflow-hidden group">
+                            <div className="bg-gradient-to-b from-slate-800 to-slate-900 h-[500px] lg:h-[680px] w-full flex items-end justify-center text-white relative overflow-hidden group">
                                 <img
                                     src="/images/hero-guia-pratico.avif"
                                     alt="Dr. Lucas Nemes — Médico Nutrólogo especialista em pós-bariátrica"
@@ -178,35 +167,6 @@ export const Hero = () => {
                                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-60" />
                             </div>
                         </div>
-                        {/* Floating notification card */}
-                        <motion.div
-                            className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[90%] lg:w-auto lg:translate-x-0 lg:-left-8 lg:-bottom-8 z-20"
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-                        >
-                            {/* iOS Notification Style Card */}
-                            <div className="bg-white/70 backdrop-blur-xl saturate-150 border border-white/40 p-4 rounded-3xl shadow-xl w-full lg:w-[260px] animate-float">
-                                <div className="flex items-center justify-between mb-2 opacity-60">
-                                    <div className="flex items-center gap-1.5">
-                                        <div className="w-5 h-5 rounded-md bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center shadow-sm">
-                                            <Calendar size={10} className="text-white" />
-                                        </div>
-                                        <span className="text-[10px] font-semibold text-slate-800 uppercase tracking-wide">Método Vida Plena</span>
-                                    </div>
-                                    <span className="text-[10px] text-slate-600">Agora</span>
-                                </div>
-
-                                <div className="flex gap-3 items-center">
-                                    <div className="flex-1">
-                                        <h4 className="font-semibold text-slate-900 text-sm mb-0.5">Resultado Confirmado</h4>
-                                        <p className="text-sm text-slate-600 leading-snug">
-                                            100% de controle metabólico alcançado.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </motion.div>
                     </motion.div>
 
                 </div>

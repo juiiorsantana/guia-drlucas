@@ -13,7 +13,7 @@ const audienceItems = [
 
 export const TargetAudience: React.FC = () => {
     return (
-        <section className="py-32 bg-slate-950 relative overflow-hidden border-t border-slate-900/50 scroll-section">
+        <section className="py-16 bg-slate-950 relative overflow-hidden border-t border-slate-900/50 scroll-section">
 
             {/* Background Texture */}
             <div className="absolute inset-0 opacity-20 pointer-events-none [background-size:40px_40px] [background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]"></div>
@@ -42,35 +42,11 @@ export const TargetAudience: React.FC = () => {
                 </div>
             </div>
 
-            <div className="absolute top-40 w-full transform rotate-3 z-0 pointer-events-none overflow-hidden">
-                <div className="bg-white/5 backdrop-blur-sm border-y border-white/10 py-4 shadow-2xl">
-                    <motion.div
-                        className="flex shrink-0"
-                        animate={{ x: [-2400, 0] }}
-                        transition={{
-                            x: {
-                                repeat: Infinity,
-                                repeatType: "loop",
-                                duration: 30,
-                                ease: "linear"
-                            }
-                        }}
-                    >
-                        {[...Array(20)].map((_, i) => (
-                            <span key={i} className="text-white/20 font-display font-black text-3xl tracking-widest uppercase italic mx-12 shrink-0 whitespace-nowrap">
-                                PÓS BARIÁTRICA
-                            </span>
-                        ))}
-                    </motion.div>
-                </div>
-            </div>
-
-
-            <div className="container mx-auto px-4 relative z-10 pt-16">
+            <div className="container mx-auto px-4 relative z-10 pt-10">
                 <motion.div
                     className="text-center mb-20"
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ y: 40 }}
+                    whileInView={{ y: 0 }}
                     viewport={{ once: true, margin: '-100px' }}
                     transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                 >
@@ -98,8 +74,8 @@ export const TargetAudience: React.FC = () => {
                             key={index}
                             className="group relative"
                             variants={{
-                                hidden: { opacity: 0, y: 30, scale: 0.9 },
-                                visible: { opacity: 1, y: 0, scale: 1 }
+                                hidden: { y: 30, scale: 0.9 },
+                                visible: { y: 0, scale: 1 }
                             }}
                             transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
                         >
@@ -126,8 +102,8 @@ export const TargetAudience: React.FC = () => {
 
                 <motion.div
                     className="mt-20 text-center"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
+                    initial={{ y: 10 }}
+                    whileInView={{ y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.6 }}
                 >

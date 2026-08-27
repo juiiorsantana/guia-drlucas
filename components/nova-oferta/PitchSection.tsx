@@ -37,14 +37,14 @@ const benefits = [
 
 export const PitchSection: React.FC = () => {
     return (
-        <section className="py-24 bg-transparent relative overflow-hidden scroll-section">
+        <section className="py-16 bg-transparent relative overflow-hidden scroll-section">
             <div className="hidden md:block absolute top-[20%] left-[-10%] w-[500px] h-[500px] bg-cyan-50 rounded-full blur-[120px] opacity-70" />
 
             <div className="container mx-auto px-4 relative z-10">
                 <motion.div
                     className="max-w-3xl mx-auto text-center mb-16"
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ y: 40 }}
+                    whileInView={{ y: 0 }}
                     viewport={{ once: true, margin: '-100px' }}
                     transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                 >
@@ -74,8 +74,8 @@ export const PitchSection: React.FC = () => {
                                 key={index}
                                 className="bg-white/80 backdrop-blur-md rounded-3xl p-7 shadow-soft hover:shadow-soft-xl transition-all duration-300 transform hover:-translate-y-1 border border-slate-100 group"
                                 variants={{
-                                    hidden: { opacity: 0, y: 24, scale: 0.96 },
-                                    visible: { opacity: 1, y: 0, scale: 1 },
+                                    hidden: { y: 24, scale: 0.96 },
+                                    visible: { y: 0, scale: 1 },
                                 }}
                                 transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
                             >

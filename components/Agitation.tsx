@@ -11,7 +11,7 @@ export const Agitation = () => {
     ];
 
     return (
-        <section className="py-24 bg-transparent overflow-hidden relative scroll-section">
+        <section className="py-16 bg-transparent overflow-hidden relative scroll-section">
             {/* Soft Background Elements */}
             <div className="absolute top-0 transform -translate-x-1/2 left-1/2 w-full max-w-7xl h-full pointer-events-none">
                 <div className="absolute top-20 left-0 w-64 h-64 bg-cyan-200 rounded-full blur-[80px] opacity-20"></div>
@@ -22,8 +22,8 @@ export const Agitation = () => {
                 <div className="max-w-4xl mx-auto">
                     <motion.div
                         className="bg-white/60 backdrop-blur-xl border border-white p-8 md:p-12 rounded-[3rem] shadow-soft-xl relative overflow-hidden"
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
+                        initial={{ y: 50 }}
+                        whileInView={{ y: 0 }}
                         viewport={{ once: true, margin: '-100px' }}
                         transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
                     >
@@ -31,12 +31,12 @@ export const Agitation = () => {
 
                         <motion.h2
                             className="text-4xl md:text-5xl font-bold mb-12 text-center text-slate-900 leading-tight"
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ y: 20 }}
+                            whileInView={{ y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
                         >
-                            A cirurgia mudou o seu corpo, mas ningúem te ensinou <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-600 font-black">a como cuidar depois?</span>
+                            A cirurgia mudou o seu corpo, mas ninguém te ensinou <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-600 font-black">a como cuidar depois?</span>
 
                         </motion.h2>
 
@@ -52,8 +52,8 @@ export const Agitation = () => {
                                     key={i}
                                     className="flex items-center gap-4 p-6 rounded-2xl bg-white border border-slate-100 hover:border-primary/30 shadow-soft-sm hover:shadow-soft transition-all duration-300 group"
                                     variants={{
-                                        hidden: { opacity: 0, y: 20, scale: 0.95 },
-                                        visible: { opacity: 1, y: 0, scale: 1 }
+                                        hidden: { y: 20, scale: 0.95 },
+                                        visible: { y: 0, scale: 1 }
                                     }}
                                     transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
                                 >
@@ -67,8 +67,8 @@ export const Agitation = () => {
 
                         <motion.div
                             className="mt-12 p-8 bg-slate-900 text-white text-center rounded-3xl relative shadow-soft-xl"
-                            initial={{ opacity: 0, y: 30, scale: 0.95 }}
-                            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                            initial={{ y: 30, scale: 0.95 }}
+                            whileInView={{ y: 0, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
                         >
@@ -77,7 +77,7 @@ export const Agitation = () => {
                                 Diagnóstico
                             </div>
                             <p className="text-xl font-medium leading-relaxed opacity-90 relative z-10">
-                                "Se você se identificou com pelo menos 2 pontos, essa <span className="text-primary font-bold">imersão</span> foi criada exatamente para você."
+                                "Se você se identificou com pelo menos 2 pontos, este <span className="text-primary font-bold">guia</span> foi criado exatamente para você."
                             </p>
                         </motion.div>
                     </motion.div>

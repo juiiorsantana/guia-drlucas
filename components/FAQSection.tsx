@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Plus, Minus, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import { goToCheckout } from './constants';
+import { goToCheckout } from './nova-oferta/constants';
 
 const faqs = [
     {
@@ -134,3 +134,5 @@ export const FAQSection: React.FC = () => {
         </section>
     );
 };
+
+export default FAQSection;

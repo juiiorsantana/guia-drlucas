@@ -22,8 +22,7 @@ const steps = [
 ];
 
 const valueStack = [
-    { item: 'Guia Prático de Dietoterapia', value: 'R$ 197' },
-    { item: '+40 Receitas Funcionais', value: 'R$ 97' },
+    { item: 'Guia Prático de Dietoterapia (+40 receitas inclusas)', value: 'R$ 197' },
     { item: 'Lista de Suplementação', value: 'R$ 67' },
     { item: 'Bônus: Mudança de Hábitos', value: 'R$ 97' },
     { item: 'Grupo Exclusivo de Membros', value: 'R$ 47' },
@@ -38,7 +37,7 @@ const seals = [
 
 export const OfferSection: React.FC = () => {
     return (
-        <section className="py-24 bg-black relative overflow-hidden scroll-section">
+        <section className="py-16 bg-black relative overflow-hidden scroll-section">
             {/* Grid pattern */}
             <div
                 className="absolute inset-0 opacity-[0.07]"
@@ -53,8 +52,8 @@ export const OfferSection: React.FC = () => {
                 {/* 3 passos */}
                 <motion.div
                     className="max-w-3xl mx-auto text-center mb-14"
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ y: 40 }}
+                    whileInView={{ y: 0 }}
                     viewport={{ once: true, margin: '-100px' }}
                     transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                 >
@@ -77,8 +76,8 @@ export const OfferSection: React.FC = () => {
                                 key={index}
                                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-6 text-center relative"
                                 variants={{
-                                    hidden: { opacity: 0, y: 24 },
-                                    visible: { opacity: 1, y: 0 },
+                                    hidden: { y: 24 },
+                                    visible: { y: 0 },
                                 }}
                                 transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
                             >
@@ -98,8 +97,8 @@ export const OfferSection: React.FC = () => {
                 {/* Card de pricing */}
                 <motion.div
                     className="max-w-xl mx-auto bg-white/5 backdrop-blur-xl border border-white/10 rounded-[2.5rem] p-8 md:p-10 shadow-[0_0_60px_rgba(6,182,212,0.15)]"
-                    initial={{ opacity: 0, y: 40, scale: 0.97 }}
-                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                    initial={{ y: 40, scale: 0.97 }}
+                    whileInView={{ y: 0, scale: 1 }}
                     viewport={{ once: true, margin: '-50px' }}
                     transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                 >
@@ -113,22 +112,22 @@ export const OfferSection: React.FC = () => {
                         ))}
                         <div className="flex items-center justify-between pt-2">
                             <span className="text-white font-bold">Valor Total</span>
-                            <span className="text-slate-400 font-bold line-through text-lg">R$ 532</span>
+                            <span className="text-slate-400 font-bold line-through text-lg">R$ 435</span>
                         </div>
                     </div>
 
                     {/* Revelação do preço */}
                     <div className="text-center mb-8">
                         <p className="text-slate-400 text-sm mb-4 font-sans">
-                            Você não vai pagar R$ 532. Nem R$ 197. Nem R$ 97.
+                            Você não vai pagar R$ 435. Nem R$ 197.
                         </p>
                         <p className="text-cyan-400 text-sm font-bold uppercase tracking-widest mb-2">
-                            Primeiro Lote
+                            Condição de Lançamento
                         </p>
                         <motion.div
                             className="font-display font-bold text-white text-7xl md:text-8xl leading-none"
-                            initial={{ opacity: 0, scale: 0.7 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
+                            initial={{ scale: 0.7 }}
+                            whileInView={{ scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.3, type: 'spring', stiffness: 120 }}
                         >
@@ -137,21 +136,12 @@ export const OfferSection: React.FC = () => {
                         <p className="text-slate-500 text-xs mt-3 font-sans">pagamento único • acesso vitalício</p>
                     </div>
 
-                    {/* Barra de urgência */}
-                    <div className="space-y-2 w-full mb-8">
-                        <div className="flex justify-between text-xs font-semibold text-slate-400 uppercase tracking-wide">
-                            <span className="flex items-center gap-1.5"><TrendingUp size={14} className="text-cyan-400" /> 37% Vendido</span>
-                            <span className="text-cyan-400">Restam Poucas Vagas</span>
-                        </div>
-                        <div className="h-2.5 w-full bg-white/10 rounded-full overflow-hidden">
-                            <motion.div
-                                className="h-full bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full"
-                                initial={{ width: 0 }}
-                                whileInView={{ width: '37%' }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 1.0, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
-                            />
-                        </div>
+                    {/* Condição de lançamento */}
+                    <div className="w-full mb-8 text-center">
+                        <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-400 uppercase tracking-wide">
+                            <TrendingUp size={14} />
+                            Condição especial de lançamento
+                        </span>
                     </div>
 
                     {/* CTA */}

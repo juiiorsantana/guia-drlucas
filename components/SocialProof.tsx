@@ -5,54 +5,53 @@ import { motion } from 'motion/react';
 
 const stats = [
     { label: 'Pacientes atendidos', value: '+300', icon: '👥' },
-    { label: 'Mantêm o peso após 12 meses', value: '89%', icon: '⚖️' },
-    { label: 'Média de gordura eliminada', value: '15kg', icon: '🔥' },
     { label: 'Dedicados à nutrologia', value: '10 Anos', icon: '✅' },
+    { label: 'Especialista', value: 'ABRAN/AMB', icon: '🩺' },
 ];
 
 const testimonials = [
     {
-        quote: "Hoje mantenho meus 45kg a menos e finalmente tenho paz com a comida. As receitas do guia viraram rotina na minha casa.",
+        quote: "Hoje tenho paz com a comida e sinto que finalmente entendi como me alimentar depois da cirurgia. As receitas do guia viraram rotina na minha casa.",
         author: "Ana P.",
         age: "38",
         role: "Paciente há 2 anos",
-        result: "−45 kg mantidos",
+        result: "Rotina alimentar organizada",
         tag: "Manutenção de peso",
         stars: 5,
     },
     {
-        quote: "Aprendi que manutenção não é perfeição, é consistência. Parei de ter deficiência de ferro pela primeira vez desde a cirurgia.",
+        quote: "Aprendi que manutenção não é perfeição, é consistência. Passei a acompanhar minha suplementação de ferro com muito mais atenção desde a cirurgia.",
         author: "Carla Mendes",
         age: "42",
         role: "Paciente há 1 ano",
-        result: "Sem anemia há 8 meses",
+        result: "Suplementação acompanhada de perto",
         tag: "Controle nutricional",
         stars: 5,
     },
     {
-        quote: "Foi a primeira vez que alguém cuidou do meu emocional junto com a nutrição. Me sinto de verdade curada por dentro.",
+        quote: "Foi a primeira vez que alguém cuidou do meu emocional junto com a nutrição. Me senti acolhida de verdade.",
         author: "Juliana Costa",
         age: "35",
         role: "Paciente há 6 meses",
-        result: "−18 kg em 6 meses",
+        result: "Acompanhamento emocional e nutricional",
         tag: "Saúde emocional",
         stars: 5,
     },
     {
-        quote: "Me sinto com 20 anos de novo, recuperei minha energia vital. Meus exames estão perfeitos pela primeira vez em anos.",
+        quote: "Recuperei minha energia no dia a dia e passei a levar meus exames de rotina muito mais a sério.",
         author: "Roberto S.",
         age: "45",
         role: "Paciente há 3 anos",
-        result: "Exames 100% normalizados",
+        result: "Acompanhamento de exames em dia",
         tag: "Qualidade de vida",
         stars: 5,
     },
     {
-        quote: "O método mudou minha relação com o espelho e com a saúde. As receitas são práticas e deliciosas, sem abrir mão dos nutrientes.",
+        quote: "O método mudou minha relação com a comida e com a saúde. As receitas são práticas e deliciosas, sem abrir mão dos nutrientes.",
         author: "Fernanda L.",
         age: "31",
         role: "Paciente há 8 meses",
-        result: "−22 kg em 8 meses",
+        result: "Alimentação reorganizada",
         tag: "Transformação corporal",
         stars: 5,
     },
@@ -61,7 +60,7 @@ const testimonials = [
         author: "Marcelo D.",
         age: "50",
         role: "Paciente há 1.5 anos",
-        result: "Suplementação zerada",
+        result: "Suplementação ajustada com orientação médica",
         tag: "Protocolo pós-bariátrico",
         stars: 5,
     },
@@ -70,7 +69,7 @@ const testimonials = [
 export const SocialProof: React.FC = () => {
 
     return (
-        <section className="py-24 bg-transparent relative overflow-hidden scroll-section">
+        <section className="py-16 bg-transparent relative overflow-hidden scroll-section">
             {/* Background Elements */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
                 <div className="absolute top-20 right-0 w-96 h-96 bg-fluid-blue rounded-full blur-3xl opacity-50 animate-pulse-fast"></div>
@@ -80,8 +79,8 @@ export const SocialProof: React.FC = () => {
             <div className="container mx-auto px-4 relative z-10">
                 <motion.div
                     className="text-center max-w-3xl mx-auto mb-16"
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ y: 40 }}
+                    whileInView={{ y: 0 }}
                     viewport={{ once: true, margin: '-100px' }}
                     transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                 >
@@ -95,7 +94,7 @@ export const SocialProof: React.FC = () => {
 
                 {/* Stats Grid */}
                 <motion.div
-                    className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20"
+                    className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-20 max-w-3xl mx-auto"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: '-50px' }}
@@ -106,8 +105,8 @@ export const SocialProof: React.FC = () => {
                             key={index}
                             className="bg-white rounded-3xl p-6 shadow-soft hover:shadow-soft-xl transition-all duration-300 transform hover:-translate-y-1 border border-slate-100 flex flex-col items-center text-center group"
                             variants={{
-                                hidden: { opacity: 0, scale: 0.8, y: 20 },
-                                visible: { opacity: 1, scale: 1, y: 0 }
+                                hidden: { scale: 0.8, y: 20 },
+                                visible: { scale: 1, y: 0 }
                             }}
                             transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
                         >
@@ -127,8 +126,8 @@ export const SocialProof: React.FC = () => {
                 {/* Testimonials */}
                 <motion.div
                     className="relative"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ y: 30 }}
+                    whileInView={{ y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
                 >
@@ -196,6 +195,9 @@ export const SocialProof: React.FC = () => {
                         <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-clinical-white dark:from-background"></div>
                         <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-clinical-white dark:from-background"></div>
                     </div>
+                    <p className="text-center text-xs text-slate-400 mt-6">
+                        Relatos de pacientes atendidos pelo Dr. Lucas Nemes. Resultados individuais podem variar.
+                    </p>
                 </motion.div>
             </div>
         </section>

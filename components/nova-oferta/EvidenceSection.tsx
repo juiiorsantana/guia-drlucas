@@ -5,52 +5,52 @@ import { Marquee } from '../ui/Marquee';
 
 const stats = [
     { label: 'Pacientes atendidos', value: '+300' },
-    { label: 'Mantêm o peso após 12 meses', value: '89%' },
     { label: 'Dedicados à nutrologia', value: '10 anos' },
+    { label: 'Especialista', value: 'ABRAN/AMB' },
 ];
 
 // Depoimentos reutilizados da página original (SocialProof)
 const testimonials = [
     {
-        quote: 'Hoje mantenho meus 45kg a menos e finalmente tenho paz com a comida. As receitas do guia viraram rotina na minha casa.',
+        quote: 'Hoje tenho paz com a comida e sinto que finalmente entendi como me alimentar depois da cirurgia. As receitas do guia viraram rotina na minha casa.',
         author: 'Ana P.',
         age: '38',
-        result: '−45 kg mantidos',
+        result: 'Rotina alimentar organizada',
         tag: 'Manutenção de peso',
     },
     {
-        quote: 'Aprendi que manutenção não é perfeição, é consistência. Parei de ter deficiência de ferro pela primeira vez desde a cirurgia.',
+        quote: 'Aprendi que manutenção não é perfeição, é consistência. Passei a acompanhar minha suplementação de ferro com muito mais atenção desde a cirurgia.',
         author: 'Carla Mendes',
         age: '42',
-        result: 'Sem anemia há 8 meses',
+        result: 'Suplementação acompanhada de perto',
         tag: 'Controle nutricional',
     },
     {
-        quote: 'Foi a primeira vez que alguém cuidou do meu emocional junto com a nutrição. Me sinto de verdade curada por dentro.',
+        quote: 'Foi a primeira vez que alguém cuidou do meu emocional junto com a nutrição. Me senti acolhida de verdade.',
         author: 'Juliana Costa',
         age: '35',
-        result: '−18 kg em 6 meses',
+        result: 'Acompanhamento emocional e nutricional',
         tag: 'Saúde emocional',
     },
     {
-        quote: 'Me sinto com 20 anos de novo, recuperei minha energia vital. Meus exames estão perfeitos pela primeira vez em anos.',
+        quote: 'Recuperei minha energia no dia a dia e passei a levar meus exames de rotina muito mais a sério.',
         author: 'Roberto S.',
         age: '45',
-        result: 'Exames 100% normalizados',
+        result: 'Acompanhamento de exames em dia',
         tag: 'Qualidade de vida',
     },
     {
-        quote: 'O método mudou minha relação com o espelho e com a saúde. As receitas são práticas e deliciosas, sem abrir mão dos nutrientes.',
+        quote: 'O método mudou minha relação com a comida e com a saúde. As receitas são práticas e deliciosas, sem abrir mão dos nutrientes.',
         author: 'Fernanda L.',
         age: '31',
-        result: '−22 kg em 8 meses',
+        result: 'Alimentação reorganizada',
         tag: 'Transformação corporal',
     },
     {
         quote: 'Profissionalismo e atenção ímpares, recomendo de olhos fechados. Finalmente entendi o que meu corpo precisa após a bariátrica.',
         author: 'Marcelo D.',
         age: '50',
-        result: 'Suplementação zerada',
+        result: 'Suplementação ajustada com orientação médica',
         tag: 'Protocolo pós-bariátrico',
     },
 ];
@@ -64,15 +64,15 @@ const beforeAfter = [
 
 export const EvidenceSection: React.FC = () => {
     return (
-        <section className="py-24 bg-medical-slate relative overflow-hidden scroll-section">
+        <section className="py-16 bg-medical-slate relative overflow-hidden scroll-section">
             <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl" />
 
             <div className="container mx-auto px-4 relative z-10">
                 {/* Credibilidade */}
                 <motion.div
                     className="max-w-3xl mx-auto text-center mb-14"
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ y: 40 }}
+                    whileInView={{ y: 0 }}
                     viewport={{ once: true, margin: '-100px' }}
                     transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                 >
@@ -97,8 +97,8 @@ export const EvidenceSection: React.FC = () => {
                             key={index}
                             className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-6 text-center"
                             variants={{
-                                hidden: { opacity: 0, scale: 0.85, y: 16 },
-                                visible: { opacity: 1, scale: 1, y: 0 },
+                                hidden: { scale: 0.85, y: 16 },
+                                visible: { scale: 1, y: 0 },
                             }}
                             transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
                         >
@@ -111,8 +111,8 @@ export const EvidenceSection: React.FC = () => {
                 {/* Depoimentos em marquee */}
                 <motion.div
                     className="relative mb-20"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ y: 30 }}
+                    whileInView={{ y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                 >
@@ -146,13 +146,16 @@ export const EvidenceSection: React.FC = () => {
                     </Marquee>
                     <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-medical-slate" />
                     <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-medical-slate" />
+                    <p className="text-center text-xs text-slate-500 mt-6">
+                        Relatos de pacientes atendidos pelo Dr. Lucas Nemes. Resultados individuais podem variar.
+                    </p>
                 </motion.div>
 
                 {/* Before / After */}
                 <motion.div
                     className="max-w-2xl mx-auto"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ y: 30 }}
+                    whileInView={{ y: 0 }}
                     viewport={{ once: true, margin: '-50px' }}
                     transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                 >

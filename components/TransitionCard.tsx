@@ -4,7 +4,7 @@ import { motion } from 'motion/react';
 
 export const TransitionCard = () => {
     return (
-        <section className="py-24 bg-transparent overflow-hidden relative scroll-section">
+        <section className="py-16 bg-transparent overflow-hidden relative scroll-section">
             {/* Decorative Background Elements */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white rounded-full blur-[100px] opacity-60 pointer-events-none"></div>
 
@@ -14,8 +14,8 @@ export const TransitionCard = () => {
                     {/* LEFT COLUMN: WhatsApp Floating Card */}
                     <motion.div
                         className="relative"
-                        initial={{ opacity: 0, x: -50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={{ x: -50 }}
+                        whileInView={{ x: 0 }}
                         viewport={{ once: true, margin: '-100px' }}
                         transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
                     >
@@ -28,8 +28,8 @@ export const TransitionCard = () => {
                                 {/* Incoming Message 1 */}
                                 <motion.div
                                     className="self-start max-w-[85%]"
-                                    initial={{ opacity: 0, x: -20 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
+                                    initial={{ x: -20 }}
+                                    whileInView={{ x: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.4, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
                                 >
@@ -42,8 +42,8 @@ export const TransitionCard = () => {
                                 {/* Incoming Message 2 */}
                                 <motion.div
                                     className="self-start max-w-[85%]"
-                                    initial={{ opacity: 0, x: -20 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
+                                    initial={{ x: -20 }}
+                                    whileInView={{ x: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.4, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
                                 >
@@ -56,8 +56,8 @@ export const TransitionCard = () => {
                                 {/* Outgoing Message (Call to Action) */}
                                 <motion.div
                                     className="self-end max-w-[90%] mt-4"
-                                    initial={{ opacity: 0, x: 20, scale: 0.95 }}
-                                    whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                                    initial={{ x: 20, scale: 0.95 }}
+                                    whileInView={{ x: 0, scale: 1 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.5, delay: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                                 >
@@ -91,8 +91,8 @@ export const TransitionCard = () => {
                         <motion.div
                             className="space-y-4"
                             variants={{
-                                hidden: { opacity: 0, y: 30 },
-                                visible: { opacity: 1, y: 0 }
+                                hidden: { y: 30 },
+                                visible: { y: 0 }
                             }}
                             transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
                         >
@@ -110,8 +110,8 @@ export const TransitionCard = () => {
                             <motion.div
                                 className="bg-white p-5 rounded-2xl shadow-soft-sm border border-slate-100 hover:shadow-soft-md hover:border-blue-100 transition-all duration-300 md:col-span-2"
                                 variants={{
-                                    hidden: { opacity: 0, y: 20, scale: 0.95 },
-                                    visible: { opacity: 1, y: 0, scale: 1 }
+                                    hidden: { y: 20, scale: 0.95 },
+                                    visible: { y: 0, scale: 1 }
                                 }}
                                 transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
                             >
@@ -130,8 +130,8 @@ export const TransitionCard = () => {
                             <motion.div
                                 className="bg-white p-5 rounded-2xl shadow-soft-sm border border-slate-100 hover:shadow-soft-md hover:border-red-100 transition-all duration-300"
                                 variants={{
-                                    hidden: { opacity: 0, y: 20, scale: 0.95 },
-                                    visible: { opacity: 1, y: 0, scale: 1 }
+                                    hidden: { y: 20, scale: 0.95 },
+                                    visible: { y: 0, scale: 1 }
                                 }}
                                 transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
                             >
@@ -147,8 +147,8 @@ export const TransitionCard = () => {
                             <motion.div
                                 className="bg-white p-5 rounded-2xl shadow-soft-sm border border-slate-100 hover:shadow-soft-md hover:border-green-100 transition-all duration-300"
                                 variants={{
-                                    hidden: { opacity: 0, y: 20, scale: 0.95 },
-                                    visible: { opacity: 1, y: 0, scale: 1 }
+                                    hidden: { y: 20, scale: 0.95 },
+                                    visible: { y: 0, scale: 1 }
                                 }}
                                 transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
                             >
@@ -164,8 +164,8 @@ export const TransitionCard = () => {
                             <motion.div
                                 className="bg-white p-5 rounded-2xl shadow-soft-sm border border-slate-100 hover:shadow-soft-md hover:border-cyan-100 transition-all duration-300 md:col-span-2"
                                 variants={{
-                                    hidden: { opacity: 0, y: 20, scale: 0.95 },
-                                    visible: { opacity: 1, y: 0, scale: 1 }
+                                    hidden: { y: 20, scale: 0.95 },
+                                    visible: { y: 0, scale: 1 }
                                 }}
                                 transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
                             >

@@ -7,18 +7,18 @@ import { motion } from "motion/react";
 
 export default function MethodDifferential() {
     return (
-        <section className="bg-medical-slate py-20 relative overflow-hidden scroll-section">
+        <section className="bg-medical-slate py-14 relative overflow-hidden scroll-section">
             <div className="container mx-auto px-4 relative z-10">
                 {/* Header */}
                 <motion.div
                     className="text-center mb-16 px-4"
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ y: 40 }}
+                    whileInView={{ y: 0 }}
                     viewport={{ once: true, margin: '-100px' }}
                     transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                 >
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white max-w-4xl mx-auto leading-tight">
-                        O Guia de Dietoterapia entrega nutrição de verdade onde dietas comuns falham.
+                        O Guia Prático de Dietoterapia entrega nutrição de verdade onde dietas comuns falham.
                     </h2>
                 </motion.div>
 
@@ -27,8 +27,8 @@ export default function MethodDifferential() {
                     {/* Problem Card */}
                     <motion.div
                         className="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group"
-                        initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={{ x: -30 }}
+                        whileInView={{ x: 0 }}
                         viewport={{ once: true, margin: '-50px' }}
                         transition={{ duration: 0.6, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
                     >
@@ -60,8 +60,8 @@ export default function MethodDifferential() {
                                     key={i}
                                     className="flex items-center gap-3 text-gray-300"
                                     variants={{
-                                        hidden: { opacity: 0, x: -20 },
-                                        visible: { opacity: 1, x: 0 },
+                                        hidden: { x: -20 },
+                                        visible: { x: 0 },
                                     }}
                                     transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
                                 >
@@ -77,8 +77,8 @@ export default function MethodDifferential() {
                     {/* VS Divider */}
                     <motion.div
                         className="flex md:flex-col items-center justify-center gap-2 py-4 md:py-0"
-                        initial={{ opacity: 0, scale: 0.5 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
+                        initial={{ scale: 0.5 }}
+                        whileInView={{ scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.4, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
                     >
@@ -92,8 +92,8 @@ export default function MethodDifferential() {
                     {/* Solution Card */}
                     <motion.div
                         className="bg-white/5 border border-primary/20 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group"
-                        initial={{ opacity: 0, x: 30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={{ x: 30 }}
+                        whileInView={{ x: 0 }}
                         viewport={{ once: true, margin: '-50px' }}
                         transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
                     >
@@ -102,7 +102,7 @@ export default function MethodDifferential() {
                             <span className="text-xs font-bold uppercase tracking-widest text-primary bg-primary/10 border border-primary/20 px-2 py-1 rounded-full">Solução</span>
                         </div>
                         <h3 className="text-2xl font-display font-bold text-white mb-2 relative z-10">
-                            Guia de Dietoterapia
+                            Guia Prático de Dietoterapia
                         </h3>
                         <p className="text-gray-400 mb-8 relative z-10 text-sm">
                             Protocolos nutricionais desenvolvidos especificamente para a fisiologia pós-bariátrica, garantindo absorção real dos nutrientes essenciais.
@@ -125,8 +125,8 @@ export default function MethodDifferential() {
                                     key={i}
                                     className="flex items-center gap-3 text-gray-300"
                                     variants={{
-                                        hidden: { opacity: 0, x: 20 },
-                                        visible: { opacity: 1, x: 0 },
+                                        hidden: { x: 20 },
+                                        visible: { x: 0 },
                                     }}
                                     transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
                                 >
@@ -142,14 +142,14 @@ export default function MethodDifferential() {
 
                 {/* 3 Pilares */}
                 <motion.div
-                    className="mb-12 text-center"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    className="mb-8 text-center"
+                    initial={{ y: 20 }}
+                    whileInView={{ y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
                 >
-                    <h3 className="text-2xl md:text-3xl font-display font-bold text-white mb-8">
-                        O Guia de Dietoterapia foca em <span className="text-primary">3 Pilares</span>
+                    <h3 className="text-xl md:text-2xl font-display font-bold text-white">
+                        Os <span className="text-primary">3 Pilares</span> do método
                     </h3>
                 </motion.div>
 
@@ -198,8 +198,8 @@ const GridItem = ({ area, icon, title, description }: GridItemProps) => {
         <motion.li
             className={`min-h-[14rem] list-none ${area}`}
             variants={{
-                hidden: { opacity: 0, scale: 0.85, y: 20 },
-                visible: { opacity: 1, scale: 1, y: 0 },
+                hidden: { scale: 0.85, y: 20 },
+                visible: { scale: 1, y: 0 },
             }}
             transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
